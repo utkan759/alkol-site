@@ -1,25 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Alkol Takip</title>
+<title>Alkol Ölçüm Sistemi</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+</style>
 </head>
 
-<body style="text-align:center;font-family:Arial">
+<body>
 
-<h1>Alkol Ölçüm Sistemi</h1>
+<h1>🚗 Alkol Ölçüm Takip Sistemi</h1>
 
-<h3>Ham Veri</h3>
+<div class="container">
 
-<iframe width="90%" height="300"
-src="https://thingspeak.com/channels/3252259/charts/1?dynamic=true">
-</iframe>
+  <div class="card">
+    <h2>📊 Ham Sensör Verisi (Son 6)</h2>
+    <iframe 
+    src="https://thingspeak.com/channels/3252259/charts/1?dynamic=true&results=6&type=line">
+    </iframe>
+  </div>
 
-<h3>Promil</h3>
+  <div class="card">
+    <h2>🍺 Promil Değeri (Son 6)</h2>
+    <iframe 
+    src="https://thingspeak.com/channels/3252259/charts/2?dynamic=true&results=6&type=line">
+    </iframe>
+  </div>
 
-<iframe width="90%" height="300"
-src="https://thingspeak.com/channels/3252259/charts/2?dynamic=true">
-</iframe>
+</div>
 
 </body>
 </html>
